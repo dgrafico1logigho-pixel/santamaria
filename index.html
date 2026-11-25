@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="" />
+    <title>Santa María | Tienda Oficial en Colombia</title>
+    <meta name="description" content="Santa María - Ecommer santa maría. Tienda oficial en Colombia. Calidad, estilo y atención personalizada con envíos a todo el país.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://santamaria.store/">
+    <meta property="og:title" content="Santa María | Tienda Oficial">
+    <meta property="og:description" content="Descubre nuestra selección exclusiva en Santa María. Envíos a toda Colombia y pago seguro.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #b45309;
+            --accent-light: #fef3c7;
+            --bg-body: #fafaf9;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --footer-bg: #0f172a;
+            --footer-text: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background-color: var(--primary);
+            color: #f8fafc;
+            font-size: 0.85rem;
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .announcement-bar span {
+            display: inline-block;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+        .brand-subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .nav-contact-btn {
+            background-color: var(--accent);
+            color: #ffffff !important;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .nav-contact-btn:hover {
+            background-color: #92400e;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: #ffffff;
+            padding: 80px 24px;
+            text-align: center;
+        }
+        .hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(254, 243, 199, 0.15);
+            color: #fde68a;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            font-weight: 400;
+        }
+        .hero-cta {
+            display: inline-flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #92400e;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Features / Categories */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 24px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Trust Banner */
+        .trust-section {
+            background-color: #f1f5f9;
+            padding: 50px 24px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .trust-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+        .trust-item h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .trust-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Institutional Section */
+        .institutional-section {
+            background-color: #ffffff;
+            padding: 70px 24px;
+        }
+        .inst-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--accent);
+            border-radius: 8px;
+            padding: 35px;
+        }
+        .inst-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        .inst-box p {
+            color: #475569;
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 60px 24px 25px;
+            margin-top: auto;
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #334155;
+        }
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Corporate Legal Box */
+        .legal-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 0.88rem;
+        }
+        .legal-box strong {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        .footer-bottom a {
+            color: #94a3b8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>🇨🇴 <strong>ENVÍOS A TODA COLOMBIA</strong> | TIENDA VIRTUAL OFICIAL | ATENCIÓN AL CLIENTE: 3130897178</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-title">SANTA MARÍA</span>
+                <span class="brand-subtitle">Ecommer santa maría</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#institucional">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="https://wa.me/573130897178" target="_blank" class="nav-contact-btn">WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="hero-tag">Comercio Electrónico Oficial</span>
+            <h1>Calidad, Confianza y Estilo para tu Día a Día</h1>
+            <p>Bienvenido a Santa María. Seleccionamos los mejores productos de moda, accesorios y artículos para tu hogar con garantía oficial y entrega rápida en toda Colombia.</p>
+            <div class="hero-cta">
+                <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+                <a href="#contacto" class="btn-secondary">Atención al Cliente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Features -->
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h4>📦 Envíos Nacionales</h4>
+                <p>Despachos a ciudades principales y municipios de Colombia.</p>
+            </div>
+            <div class="trust-item">
+                <h4>🔒 Compra Protegida</h4>
+                <p>Pagos seguros y canales de atención directa y personalizada.</p>
+            </div>
+            <div class="trust-item">
+                <h4>🏢 Empresa Registrada</h4>
+                <p>Operado formalmente por MR SLANG MEYER CALI SAS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog / Categories -->
+    <section class="section-container" id="catalogo">
+        <div class="section-header">
+            <h2>Nuestras Colecciones</h2>
+            <p>Descubre productos pensados para acompañar tu estilo de vida con la máxima calidad y respaldo.</p>
+        </div>
+        <div class="card-grid">
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Moda & Tendencias</h3>
+                <p>Prendas y accesorios diseñados con materiales seleccionados para brindarte confort, distinción y durabilidad.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Hogar & Estilo</h3>
+                <p>Artículos prácticos y decorativos para convertir tus espacios en ambientes acogedores y modernos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Artículos Seleccionados</h3>
+                <p>Novedades y colecciones de temporada elegidas bajo estrictos estándares de satisfacción y precio justo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional / Corporate Profile -->
+    <section class="institutional-section" id="institucional">
+        <div class="inst-box">
+            <h3>Acerca de Nosotros e Información Institucional</h3>
+            <p><strong>Santa María</strong> (con establecimiento comercial registrado <strong>Ecommer santa maría</strong>) es una marca colombiana dedicada al comercio electrónico y distribución de productos de alta demanda, enfocada en la satisfacción y el servicio transparente hacia nuestros clientes.</p>
+            <p>Nuestra operación administrativa, logística y comercial se encuentra formalmente constituida bajo la razón social <strong>MR SLANG MEYER CALI SAS</strong>, debidamente matriculada ante la <strong>Cámara de Comercio de Cali</strong>.</p>
+            <p>Garantizamos el cumplimiento normativo colombiano en comercio electrónico, protección al consumidor y tratamiento seguro de datos personales.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-grid">
+            <!-- Col 1: Brand Info -->
+            <div class="footer-col">
+                <h4>SANTA MARÍA</h4>
+                <p>Establecimiento de Comercio: <strong>Ecommer santa maría</strong>.</p>
+                <p>Tu tienda virtual de confianza con envíos garantizados y atención humana personalizada.</p>
+            </div>
+
+            <!-- Col 2: Customer Service -->
+            <div class="footer-col">
+                <h4>ATENCIÓN AL CLIENTE</h4>
+                <p><strong>Teléfono:</strong> <a href="tel:+573130897178" style="color: #ffffff; text-decoration: none;">+57 3130897178</a></p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:atencioncliente@santamaria.store" style="color: #ffffff; text-decoration: none;">atencioncliente@santamaria.store</a></p>
+                <p><strong>Horario de atención:</strong> Lunes a Sábado, 8:00 a.m. - 6:00 p.m.</p>
+                <p><strong>Dominio oficial:</strong> santamaria.store</p>
+            </div>
+
+            <!-- Col 3: Legal Navigation -->
+            <div class="footer-col">
+                <h4>ENLACES LEGALES</h4>
+                <ul>
+                    <li><a href="politicas-privacidad.html">Políticas de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="#institucional">Información Corporativa</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Mandatory Legal Corporate Dossier -->
+            <div class="footer-col">
+                <h4>INFORMACIÓN LEGAL (CÁMARA DE COMERCIO)</h4>
+                <div class="legal-box">
+                    <p><strong>Razón Social:</strong> MR SLANG MEYER CALI SAS</p>
+                    <p><strong>NIT:</strong> 900974959-1</p>
+                    <p><strong>Establecimiento:</strong> Ecommer santa maría</p>
+                    <p><strong>Cámara de Comercio:</strong> Cali</p>
+                    <p><strong>Matrícula Mercantil:</strong> 761297-86</p>
+                    <p><strong>Dirección:</strong> CL 19 NORTE # 21 - 935 CS 20</p>
+                    <p><strong>Ciudad / País:</strong> Cali, Valle del Cauca, Colombia</p>
+                    <p><strong>Teléfono Oficial:</strong> 3130897178</p>
+                    <p><strong>Correo Oficial:</strong> atencioncliente@santamaria.store</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Santa María. Todos los derechos reservados. Operado legalmente por <strong>MR SLANG MEYER CALI SAS</strong> (NIT: 900974959-1).</p>
+            <p style="margin-top: 8px;">
+                <a href="politicas-privacidad.html">Privacidad</a> | 
+                <a href="terminos-condiciones.html">Términos del Servicio</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
